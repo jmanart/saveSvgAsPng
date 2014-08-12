@@ -42,7 +42,7 @@
     var sheets = document.styleSheets;
     for (var i = 0; i < sheets.length; i++) {
       var rules = sheets[i].cssRules;
-      for (var j = 0; j < rules.length; j++) {
+      for (var j = 0; j < rules?rules.length:0; j++) {
         var rule = rules[j];
         if (typeof(rule.style) != "undefined") {
           var elems = dom.querySelectorAll(rule.selectorText);
